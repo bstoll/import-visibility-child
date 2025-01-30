@@ -8,4 +8,5 @@ go_library(
     srcs = ["child.go"],
     importpath = "github.com/bstoll/import-visibility-child",
     visibility = ["//visibility:public"],
+    deps = ["@com_github_bstoll_import_visibility_parent//:import-visibility-parent"],
 )
