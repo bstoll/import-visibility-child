@@ -1,0 +1,11 @@
+load("@bazel_gazelle//:def.bzl", "gazelle", "gazelle_test")
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+gazelle(name = "gazelle")
+
+go_library(
+    name = "import-visibility-child",
+    srcs = ["child.go"],
+    importpath = "github.com/bstoll/import-visibility-child",
+    visibility = ["//visibility:public"],
+)
